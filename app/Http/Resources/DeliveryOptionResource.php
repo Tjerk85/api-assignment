@@ -15,6 +15,12 @@ class DeliveryOptionResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'provider' => $this->provider,
+            'service' => $this->service,
+            'country' => $this->country,
+            'weekends' => $this->weekends,
+            'price' => $this->price,
+        ];
     }
 }
