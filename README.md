@@ -14,7 +14,7 @@ docker compose exec -it php composer install
 ```
 
 ```bash
-docker compose exec -it artisan 
+docker compose exec -it php php artisan migrate
 ```
 Check if on ```localhost:88``` you can see the standard laravel welcome page.
 
@@ -49,3 +49,9 @@ shipment-date options:
 
 #### Example with combined query parameters:<br/>
 http://localhost:88/api/delivery-options?country=nl&package-type=pallet&shipment-date=17-08-2024
+
+## Tests
+To check the feature tests, run the following command:
+```bash
+docker compose exec -it php php artisan test
+```

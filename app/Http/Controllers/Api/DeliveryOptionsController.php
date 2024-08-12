@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DeliveryOptionsRequest;
 use App\Http\Resources\DeliveryOptionResource;
 use App\Models\DeliveryOption;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Carbon;
 
@@ -18,10 +18,10 @@ class DeliveryOptionsController extends Controller
      * shipment-date: 16-08-2024,
      * package-type: standard, mailbox, pallet
      * ]
-     * @param Request $request
+     * @param DeliveryOptionsRequest $request
      * @return AnonymousResourceCollection
      */
-    public function show(Request $request): AnonymousResourceCollection
+    public function show(DeliveryOptionsRequest $request): AnonymousResourceCollection
     {
         $query = DeliveryOption::query();
 
