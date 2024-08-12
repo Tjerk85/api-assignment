@@ -16,6 +16,10 @@ docker compose exec -it php composer install
 ```bash
 docker compose exec -it php php artisan migrate
 ```
+
+```bash
+docker compose exec -it php php artisan db:seed --class=DeliveryOptionsSeeder
+```
 Check if on ```localhost:88``` you can see the standard laravel welcome page.
 
 ## Usage
